@@ -1,0 +1,139 @@
+/****** start destinations  *****/
+	.destinations
+		padding 102px 0 69px 0
+		h3
+			color $dark
+			line-height 32px
+			&:after
+				background-color $dark
+				margin-top 27px
+		&__tabs
+			color $purple
+			.tabbable-panel
+				margin-top 107px
+				.nav-tabs
+					li
+						a
+							color $purple
+							border-color transparent
+							background-color transparent
+							font-size 24px
+							line-height 1.33
+							transition all 0.2s ease-in-out
+							outline none
+							border-radius 0
+					.active
+						a	
+							border-bottom 3px solid $purple			
+				.destinations__slider
+					padding 85px 0
+					.slider--item
+						padding 0
+						li
+							box-shadow 0 2px 50px 0 rgba(0, 0, 0, 0.4)
+							img 
+								width 100%	
+								
+							.item--back
+								position relative
+								background -webkit-linear-gradient(rgba(124, 148, 185, 0), #465b83)
+								background -o-linear-gradient(rgba(124, 148, 185, 0), #465b83)
+								background  linear-gradient(rgba(124, 148, 185, 0), #465b83)	
+							.item__type
+								position absolute
+								bottom 0%
+								padding 0 15px	
+								width 100%
+								.item--head
+									margin-bottom 47px
+									h3
+										color $white
+										line-height 32px
+										font-size 25px
+										&:after
+											display none
+									p
+										font-size 16px
+										color $white
+										text-transform uppercase
+										font-weight 100	
+								.item--footer
+									width 100%
+									display flex
+									justify-content space-between
+									align-items baseline
+									margin-bottom 10px
+									a
+										display inline-block
+										height 50px 
+										width 50px
+										background-color #d33497
+										color $white
+										line-height 50px
+										text-align center
+										border-radius 50%
+									p
+										color $white
+										font-size 14px
+										text-transform uppercase
+										display inline-block	
+					.click-prev
+						position absolute
+						top 67%
+						left -1%
+									
+					.click-prev:before
+							position absolute
+							content '\f104'		
+							font-family FontAwesome
+							font-style normal
+							font-weight normal
+							color #d8d8d8
+							font-size 30px
+							line-height 30px
+					.click-next
+						position absolute
+						top 67%
+						right 0		
+					.click-next:before
+							position absolute
+							content '\f105'
+							font-family FontAwesome
+							font-style normal
+							font-weight normal		
+							font-size 30px
+							line-height 30px
+							color #d8d8d8
+							// transform translateX(100%) scale(1.2)
+							transition transform .7s ease-in-out
+							position relative
+							z-index 1	
+.destinations__tabs .tabbable-panel .destinations__slider .slider--item li.actives .item__type {							
+	bottom 0%		
+	}
+.destinations__tabs .tabbable-panel .destinations__slider .slider--item {
+  height: 472px;
+  display: block;
+  perspective: 1000px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.destinations__tabs .tabbable-panel .destinations__slider .slider--item li {
+    display: inline-block;
+    width: 300px;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: .4s all;
+  }
+.destinations__tabs .tabbable-panel .destinations__slider .slider--item li img {
+    width: 100%;
+  }
+.destinations__tabs .tabbable-panel .destinations__slider .slider--item li.active {
+    bottom: 38%;
+  }
+.destinations__tabs .tabbable-panel .destinations__slider .slider--item li.active img {
+    z-index: 4; 
+  }								
+/****** end destinations  *****/

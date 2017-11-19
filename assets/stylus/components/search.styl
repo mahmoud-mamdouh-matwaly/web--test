@@ -1,0 +1,296 @@
+/***** start search *****/
+
+.search 
+	background url('../img/module-bg.png') no-repeat center center 
+	background-size cover
+	padding-bottom 100px
+	&__content
+		margin-top 10px
+		h3
+			color $white
+			&:after
+				background-color $white
+				margin-top 8px
+	&__box
+		background-color rgba(255, 255, 255, 0.1)
+		border-radius 5px
+		z-index -1	
+		box-shadow 0 2px 3px 0 rgba(0, 0, 0, 0.1)
+		&--details
+			z-index 1
+			background-color rgba(0,0,0,0.4)
+			padding 20px
+			border-radius 5px
+			margin-top 84px
+		&--head
+			display flex
+			flex-direction row
+			flex-wrap wrap
+			justify-content space-between
+			margin-bottom 15px
+			.head--link
+				flex 0 0 38%		
+				.active
+					background-color rgba(119, 119, 119, 0.3)
+				a
+					display inline-block
+					color $white
+					text-decoration none
+					padding 10px 0
+					border-radius 3px
+					margin-right 5px
+					width calc(100% / 3 - 39px)
+					text-align center	
+					&:hover
+						background-color $gray
+			.head--checkbox
+				label
+					margin-left 15px
+					padding-left 15px	
+					color $white
+				input[type='checkbox'], input[type='checkbox']:focus
+					border 1px solid $white			
+		&--text
+			display flex
+			flex-direction row
+			flex-wrap wrap
+			.text--input
+				display flex
+				flex-direction column
+				flex 0 0 37%
+				position relative
+				font-size 16px
+				margin-right 5px
+				.input--tags:nth-child(2)
+					input
+						border-bottom-left-radius 5px
+						border-bottom-right-radius 5px
+						border-top-left-radius 0
+						border-top-right-radius 0
+				.input--tags
+					.tags--form
+						outline none
+						height 45px
+						border-top-left-radius 5px
+						border-top-right-radius 5px
+						border 0
+						margin-bottom 1px
+						padding-left 30px
+						color $purple
+						width 100%
+						&::-webkit-input-placeholder
+							color $purple
+						&::-moz-placeholder
+							color $purple
+					.fa.fa-map-marker
+						position absolute
+						bottom 16%
+						left 3%
+						color $purple
+					label
+						position absolute
+						right 0
+						width 20%
+						display flex
+						height 30px
+						margin-right 20px
+						margin-bottom 0
+						color $purple	
+						span
+							font-size 10px	
+							font-weight 100
+							text-align center
+							padding-right 15px
+						input[type='checkbox'], input[type='checkbox']:focus
+							width 33px
+							height 20px
+							border 1px solid $purple
+							outline none
+							position relative
+							top 0
+							cursor pointer
+							font normal normal normal 23px/1 FontAwesome
+							border-radius 2px
+								
+						input[type='checkbox']:checked:before
+							content '\f00c'
+							font-size 14px
+							left 2px
+							position relative
+							top -7px
+					.top
+						top 10%
+					.bottom
+						bottom 10%	
+			.text--calenter
+				display flex
+				flex-direction row
+				flex 0 0 25%
+				margin-right 5px
+				.calendar--left 
+					flex 0 0 50%
+					display flex
+					flex-direction row
+					align-items baseline
+					background-color $white
+					border-top-left-radius 5px
+					border-bottom-left-radius 5px
+					text-align center
+					margin-right 1px
+					color $purple
+					padding 3px 29px 3px 20px
+					font-size 14px
+					i
+						font-size 20px
+						position relative
+						top 5px
+						left -6px
+						&:after
+							content '\f178'
+							font-family FontAwesome
+							font-style normal
+							font-weight normal
+							position absolute
+							top 7px 
+							left 4px
+							font-size 10px
+
+					p
+						display flex
+						flex-direction column
+						margin-bottom 0
+						text-transform uppercase
+						width 100%
+						text-align center
+						height 100%
+						font-size 11px
+						span:nth-child(2)
+							font-weight bold
+							font-size 26px
+				.calendar--right
+					flex 0 0 50%
+					padding 3px 29px 3px 20px
+					background-color $white
+					border-bottom-right-radius 5px
+					border-top-right-radius 5px
+					text-align center
+					color $gray
+					display flex
+					flex-direction column
+					justify-content center
+					p
+						text-transform uppercase
+						margin-bottom 0
+						font-size 11px
+					i
+						font-size 32px
+						position relative
+						display inline-table
+						margin 5px auto
+						&:after
+							content '\f177'
+							font-family FontAwesome
+							font-style normal
+							font-weight normal
+							position absolute
+							top 35% 
+							left 20%
+							font-size 16px
+			.text--select	
+				flex 0 0 25%
+				margin-right 5px
+				.select--drop:nth-child(2)
+					select
+						border-bottom-left-radius 5px
+						border-bottom-right-radius 5px
+						border-top-left-radius 0
+						border-top-right-radius 0
+				.select--drop
+					position relative
+					select
+						cursor pointer
+						-moz-appearance none
+						-webkit-appearance none
+						appearance none
+						padding 10px
+						width 100%	
+						outline none
+						height 45px
+						border-top-left-radius 5px
+						border-top-right-radius 5px
+						border 0
+						margin-bottom 1px
+						color $purple
+						box-shadow none	
+					&:after
+						content '\f078'
+						font-family FontAwesome
+						font-style normal
+						font-weight normal
+						position absolute
+						top 25% 
+						right 7%
+						font-size 16px
+						color $purple
+			.text--flight
+				flex 0 0 11%
+				background -webkit-linear-gradient(top, rgba(156, 45, 135, 1) 0%, rgba(126, 36, 109, 1) 100%)
+				background -moz-linear-gradient(top, rgba(156, 45, 135, 1) 0%, rgba(126, 36, 109, 1) 100%)
+				background linear-gradient(to bottom, rgba(156, 45, 135, 1) 0%, rgba(126, 36, 109, 1) 100%)
+				border-radius 5px
+				display flex
+				flex-direction column
+				justify-content center
+				transition all 0.3s ease-in-out
+				border 1px solid transparent
+				border-top 0
+				a
+					color $white
+					padding 10px
+					text-decoration none
+					display block
+					text-align center
+					transition all 0.3s ease-in-out
+					i
+						display block
+						font-size 20px
+						font-weight 100
+					span		
+						font-size 15px	
+						display block
+						margin-top 15px	
+					
+							
+			
+			
+input[type='checkbox'], input[type='checkbox']:focus {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #000000;
+    outline: none;
+    position: relative;
+    top: 3px;
+    font: normal normal normal 23px/1 FontAwesome;
+    cursor: pointer;
+}
+input[type='checkbox']:checked:before {
+    content: "\f00c";
+    font-size: 12px;
+    left: 0;
+    position: relative;
+    top: -8px;
+}
+			
+						
+						
+				
+				 
+				 	
+			
+				 		
+							
+			
+
+
+/***** end search *****/

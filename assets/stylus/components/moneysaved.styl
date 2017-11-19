@@ -1,0 +1,45 @@
+.moneysaved
+	position relative
+	height 500px
+	&__head
+		background linear-gradient(#0076c4 70%, rgba(0,118,196,0.4) 93%, rgba(0,118,196,0) 104%)
+		height 250px
+		h3
+			color $white
+			width 60%
+			line-height 50px
+			&:after
+				background $white
+				margin-top 16px
+	&__details
+		display flex
+		flex-direction row
+		position absolute 
+		top 20% 
+		z-index -1
+		width 100%
+		overflow hidden
+		&--item
+			width calc(100% / 3)
+			position relative
+			img
+				width 100%		
+			.item--type
+				color $white
+				position absolute
+				bottom 0
+				left 0	
+				width 100%
+				span
+					z-index -1
+					font-size 125px	
+					font-weight 800
+					opacity 0.32
+				p
+					position absolute
+					bottom 19%
+					left 12%	
+					font-size 30px
+					font-weight bold
+					width 70%
+					margin-bottom 0
